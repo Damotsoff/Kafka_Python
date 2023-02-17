@@ -1,10 +1,10 @@
 import json
 from kafka import KafkaProducer
 from kafka import KafkaConsumer
-from config import ORDER_CONFIRMED_KAFKA_TOPIC, ORDER_KAFKA_TOPIC, HOST
+from config import ORDER_CONFIRMED_KAFKA_TOPIC, ORDER_KAFKA_TOPIC, KAFKA_HOST
 
-consumer = KafkaConsumer(ORDER_KAFKA_TOPIC, bootstrap_servers=HOST)
-producer = KafkaProducer(bootstrap_servers=HOST)
+consumer = KafkaConsumer(ORDER_KAFKA_TOPIC, bootstrap_servers=KAFKA_HOST)
+producer = KafkaProducer(bootstrap_servers=KAFKA_HOST)
 
 
 print("Gonna start listening")
