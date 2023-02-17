@@ -1,10 +1,9 @@
 import json
 from kafka import KafkaConsumer
-
-ORDER_CONFIRMED_KAFKA_TOPIC = "order_confirmed"
+from config import ORDER_CONFIRMED_KAFKA_TOPIC,KAFKA_HOST
 
 consumer = KafkaConsumer(
-    ORDER_CONFIRMED_KAFKA_TOPIC, bootstrap_servers="localhost:29092"
+    ORDER_CONFIRMED_KAFKA_TOPIC, bootstrap_servers=KAFKA_HOST
 )
 
 total_orders_count = 0
