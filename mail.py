@@ -2,7 +2,7 @@ import json
 from kafka import KafkaConsumer
 
 ORDER_CONFIRMED_KAFKA_TOPIC = "order_confirmed"
-consumer = KafkaConsumer(ORDER_CONFIRMED_KAFKA_TOPIC, "localhost:29092")
+consumer = KafkaConsumer(ORDER_CONFIRMED_KAFKA_TOPIC, bootstrap_servers="localhost:29092")
 
 emails_sent_so_far = set()
 print("Gonna start listening")
