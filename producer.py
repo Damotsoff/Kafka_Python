@@ -16,7 +16,7 @@ for i in range(ORDER_LIMIT):
     data = {
         "order_id": i,
         "user_id": f"tom_{i}",
-        "total_costs": i,
+        "total_cost": i,
         "items": "burgers,sandwitch",
     }
     producer.send(ORDER_KAFKA_TOPIC, json.dumps(data).encode("utf-8"))

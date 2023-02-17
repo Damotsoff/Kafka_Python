@@ -17,10 +17,10 @@ while True:
         consumed_message = json.loads(message.value.decode())
         print(consumed_message)
         user_id = consumed_message["user_id"]
-        total_costs = consumed_message["total_costs"]
+        total_cost = consumed_message["total_cost"]
         data = {
             "user_id": user_id,
-            "total_costs": total_costs,
+            "total_cost": total_cost,
             "customer_email": f"{user_id}@gmail.com",
         }
         print("Successful transaction..")
