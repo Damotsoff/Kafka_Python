@@ -1,6 +1,6 @@
 from kafka import KafkaConsumer
 
-consumer = KafkaConsumer("order_details", bootstrap_server="localhost:29092")
+consumer = KafkaConsumer("order_details", bootstrap_servers="localhost:29092")
 
 print("Gonna start listening")
 
