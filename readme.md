@@ -10,5 +10,6 @@ The system needs to be well scalable. Given its decoupled nature, you can scale 
 The system is also very extensible due to the nature of Apache Kafka. Messages for a given thread can be stored inside Kafka. This means that if you want to create a new component, you can replay all the theme messages from the beginning and have the component handle all the messages from the beginning of the theme. 
 
 Similarly, given Kafka's persistence, if there is a problem with any downstream or upstream system, you will not suffer from data loss.
+![title](files/image.png)
 
 
