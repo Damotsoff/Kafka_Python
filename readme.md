@@ -1,4 +1,21 @@
-
+**Run:**
+``` 
+docker compose up 
+```
+**Attention! run each python file in a separate terminal window, or with Tmux.  
+To make it work, you need to run all the python files I listed below. Each file in a separate terminal.**
+```
+python3 transaction.py
+```
+```
+python3 analytics.py
+```
+```
+python3 mail.py
+```
+```
+python3 order_backend.py
+```
 Here I am developing a highly scalable backend system for a food ordering application. The system is event-driven. Every important thing is an event, such as order placement and order confirmation. 
 
 These events are recorded in Apache Kafka, which is the central bus for all moving data. Other systems, such as a transaction system or email system, will be built on top of Apache Kafka. They will subscribe to various Kafka topics that interest them, and process them in real time as those messages are written to Kafka. 
