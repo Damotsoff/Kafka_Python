@@ -3,7 +3,7 @@ import json
 from kafka import KafkaProducer
 
 
-ORDER_KAFKA_TOPIC = "order_detail"
+ORDER_KAFKA_TOPIC = "order_details"
 ORDER_LIMIT = 15
 
 producer = KafkaProducer(bootstrap_servers="localhost:29092")
@@ -19,6 +19,6 @@ for i in range(ORDER_LIMIT):
         "total_costs": i,
         "items": "burgers,sandwitch",
     }
-    producer.send("order_details", json.dumps(data).encode("utf-8"))
+    producer.send(ORDER_KAFKA_TOPIC, json.dumps(data).encode("utf-8"))
     print(f"Done sending..{i}")
     time.sleep(5)
